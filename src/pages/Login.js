@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { FaGoogle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
-//import { ThemeContext } from "../context/ThemeContext";
-//import ThemeToggle from "../components/ThemeToggle";
+
+
 
 const Login = () => {
    const navigate = useNavigate();

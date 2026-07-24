@@ -385,7 +385,7 @@ const handleRefresh = () => {
   onClick={handleRefresh}
   style={{
     marginTop: "18px",
-   display: "flex",
+  
 marginLeft: "auto",
 marginRight: "auto",
 

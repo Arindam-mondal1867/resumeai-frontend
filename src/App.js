@@ -27,7 +27,7 @@ function App() {
       "ra_token"
     );
 
-    const { dark, setDark } = useContext(ThemeContext);
+    const { dark } = useContext(ThemeContext);
 
   // =========================
   // SIDEBAR STATE

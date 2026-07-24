@@ -68,18 +68,7 @@ useEffect(() => {
   // ANALYSIS STATE
   // =========================
 
-  const [analysis, setAnalysis] =
-    useState(
-
-      JSON.parse(
-
-        localStorage.getItem(
-          "analysisData"
-        )
-
-      ) || {}
-
-    );
+  
 
     const [profileOpen, setProfileOpen] = useState(false);
 
@@ -87,26 +76,7 @@ useEffect(() => {
   // AUTO UPDATE
   // =========================
 
-  useEffect(() => {
-
-    const storedAnalysis =
-      JSON.parse(
-
-        localStorage.getItem(
-          "analysisData"
-        )
-
-      );
-
-    if (storedAnalysis) {
-
-      setAnalysis(
-        storedAnalysis
-      );
-
-    }
-
-  }, [location.pathname]);
+ 
 
   // =========================
   // MENU

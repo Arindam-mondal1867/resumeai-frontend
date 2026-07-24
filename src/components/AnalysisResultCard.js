@@ -132,26 +132,8 @@ const AnalysisResultCard = ({
 
 const rating = getStarRating(data.matchScore);
 
-  const isDark =
-document.body.classList.contains("dark");
 
-const colors = isDark
-?{
-card:"linear-gradient(145deg,#111827,#1e293b)",
-bg:"#0f172a",
-title:"#ffffff",
-text:"#cbd5e1",
-sub:"#94a3b8",
-border:"rgba(255,255,255,.08)"
-}
-:{
-card:"#ffffff",
-bg:"#f8fafc",
-title:"#0f172a",
-text:"#334155",
-sub:"#64748b",
-border:"#e2e8f0"
-};
+
 
 
  const loadingSteps = [
