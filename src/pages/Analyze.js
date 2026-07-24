@@ -15,7 +15,7 @@ function Analyze() {
       const token = localStorage.getItem("ra_token");
 
       const res = await axios.post(
-        "http://localhost:5000/api/analyze",
+        "https://resumeai-backend-38iy.onrender.com/api/analyze",
         formData,
         {
           headers: {

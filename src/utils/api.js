@@ -2,7 +2,7 @@ import axios from "axios";
 
 // ✅ Base API
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://resumeai-backend-38iy.onrender.com/api",
 });
 
 // ✅ Add token automatically

@@ -148,7 +148,7 @@ function AskAI() {
         const res =
           await axios.post(
 
-            "http://localhost:5000/api/ask-ai",
+            "https://resumeai-backend-38iy.onrender.com/api/ask-ai",
 
             {
 

@@ -18,7 +18,7 @@ const History = () => {
       const token = localStorage.getItem("ra_token");
 
       const res = await axios.get(
-        "http://localhost:5000/api/history",
+        "https://resumeai-backend-38iy.onrender.com/api/history",
         {
           headers: {
             Authorization: `Bearer ${token}`,

@@ -130,7 +130,7 @@ const theme = dark ? "dark" : "light";
       const response =
         await axios.post(
 
-          "http://localhost:5000/api/analyze",
+          "https://resumeai-backend-38iy.onrender.com/api/analyze",
 
           formData,
 

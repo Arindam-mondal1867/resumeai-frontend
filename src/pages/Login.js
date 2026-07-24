@@ -21,7 +21,7 @@ const Login = () => {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://resumeai-backend-38iy.onrender.com/api/auth/login",
         { email, password }
       );
 
@@ -40,7 +40,7 @@ localStorage.setItem("ra_user", JSON.stringify(res.data.user));
     alert("Google login coming soon 🚀");
 
     // 👉 future backend connect
-     window.location.href = "http://localhost:5000/api/auth/google";
+     window.location.href = "https://resumeai-backend-38iy.onrender.com/api/auth/google";
   };
 
   return (

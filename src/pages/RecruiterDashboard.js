@@ -33,7 +33,7 @@ const [selectedResume, setSelectedResume] = useState(null);
       const token = localStorage.getItem("ra_token");
 
       const res = await axios.get(
-        "http://localhost:5000/api/history",
+        "https://resumeai-backend-38iy.onrender.com/api/history",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -54,7 +54,7 @@ const [selectedResume, setSelectedResume] = useState(null);
     try {
       const token = localStorage.getItem("ra_token");
 
-      await axios.delete(`http://localhost:5000/api/history/${id}`, {
+      await axios.delete(`https://resumeai-backend-38iy.onrender.com/api/history/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -71,7 +71,7 @@ const [selectedResume, setSelectedResume] = useState(null);
     try {
       const token = localStorage.getItem("ra_token");
 
-      await axios.delete("http://localhost:5000/api/history", {
+      await axios.delete("https://resumeai-backend-38iy.onrender.com/api/history", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
