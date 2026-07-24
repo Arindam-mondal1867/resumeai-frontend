@@ -112,6 +112,19 @@ const Tag = ({
   </span>
 );
 
+const loadingSteps = [
+
+  "Matching skills...",
+
+  "Calculating ATS score...",
+
+  "Checking projects...",
+
+  "Analyzing experience...",
+
+  "Generating roadmap..."
+];
+
 const AnalysisResultCard = ({
   data,
   loading
@@ -133,21 +146,6 @@ const AnalysisResultCard = ({
 const rating = getStarRating(data.matchScore);
 
 
-
-
-
- const loadingSteps = [
-
-  "Matching skills...",
-
-  "Calculating ATS score...",
-
-  "Checking projects...",
-
-  "Analyzing experience...",
-
-  "Generating roadmap..."
-];
 
 const [visibleSteps,
 setVisibleSteps] =
