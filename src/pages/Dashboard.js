@@ -645,7 +645,7 @@ GLOW
 
   border-radius:50%;
 
-  filter:blur(140px);
+  filter:blur(80px);
 
   opacity:0.18;
 
@@ -664,7 +664,7 @@ GLOW
 
   border-radius:50%;
 
-  filter:blur(140px);
+  filter:blur(80px);
 
   opacity:0.12;
 
@@ -722,7 +722,7 @@ HERO
   border:
     1px solid rgba(255,255,255,0.07);
 
-  backdrop-filter:blur(18px);
+  backdrop-filter:blur(10px);
 
   box-shadow:
     0 0 40px rgba(59,130,246,0.12);
@@ -937,7 +937,7 @@ ${theme === "dark"
   border:
     1px solid rgba(255,255,255,0.06);
 
-  backdrop-filter:blur(18px);
+ backdrop-filter:blur(10px);
 
   transition:
     transform 0.35s ease,
@@ -1780,6 +1780,53 @@ font-size:16px;
 .ringWrap{
 
 transform:scale(.8);
+
+}
+
+.animatedGrid{
+display:none;
+}
+.bgGlowOne,
+.bgGlowTwo{
+
+display:none;
+
+}
+
+.heroCard::before{
+
+animation:none;
+
+}
+
+.uploadIconBox{
+
+animation:none;
+
+}
+
+.heroCard:hover{
+
+transform:none;
+
+box-shadow:none;
+
+}
+
+.glassCard:hover,
+.uploadCard:hover{
+
+transform:none;
+
+box-shadow:none;
+
+}
+html,
+body{
+
+-webkit-overflow-scrolling:touch;
+
+scroll-behavior:smooth;
 
 }
 

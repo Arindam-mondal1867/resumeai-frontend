@@ -384,266 +384,165 @@ TOP SECTION
 
 {/* PROFILE */}
 
-        {/* PROFILE */}
-
         <div
+  style={{
+    position: "relative",
+    marginBottom: "25px",
+  }}
+>
 
+  {/* Profile Header */}
+
+  <div
+    onClick={() => setProfileOpen(!profileOpen)}
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "12px",
+      cursor: "pointer",
+    }}
+  >
+
+    <div
+      style={{
+        width: "52px",
+        height: "52px",
+        borderRadius: "50%",
+        background: "#1e293b",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        color: "white",
+        fontSize: "22px",
+        fontWeight: "700",
+      }}
+    >
+      {user?.name?.charAt(0)?.toUpperCase() || "U"}
+    </div>
+
+    {(!collapsed || isMobile) && (
+      <div>
+        <div
           style={{
-
-            display: "flex",
-
-            alignItems: "center",
-
-           justifyContent:
-
-collapsed
-
-? "center"
-
-: "flex-start",
-
-            gap:
-
-              collapsed
-
-                ? "0px"
-
-                : "12px",
-
-            marginBottom:
-              "25px"
-
+            color: "white",
+            fontWeight: "700",
+            fontSize: "18px",
           }}
         >
-
-          {/* AVATAR */}
-
-          <div
-
-           onClick={() => setProfileOpen(!profileOpen)}
-
-            style={{
-
-              cursor: "pointer",
-
-              width: "50px",
-
-              height: "50px",
-
-              borderRadius:
-                "50%",
-
-              background:
-
- dark
-
-    ? "#111827"
-
-    : "#ffffff",
-
-              border:
-                "1px solid rgba(255,255,255,0.08)",
-
-              display: "flex",
-
-              alignItems:
-                "center",
-
-              justifyContent:
-                "center",
-
-              fontWeight:
-                "bold",
-
-              fontSize:
-                "20px",
-
-              color:
-                "white",
-
-              flexShrink: 0
-
-            }}
-          >
-
-            {
-
-              user?.name
-
-                ?.charAt(0)
-
-                ?.toUpperCase()
-
-              || "U"
-
-            }
-
-          </div>
-
-          {profileOpen && (
-
-<div
-style={{
-position:"absolute",
-top:"85px",
-left:"20px",
-width:"260px",
-background:"#111827",
-border:"1px solid rgba(255,255,255,.08)",
-borderRadius:"18px",
-padding:"18px",
-boxShadow:"0 20px 40px rgba(0,0,0,.45)",
-zIndex:9999
-}}
->
-
-<h3
-style={{
-margin:"0 0 15px 0",
-color:"white"
-}}
->
-My Profile
-</h3>
-
-<p style={{color:"#94a3b8"}}>
-<div style={{display:"flex",alignItems:"center",gap:"10px",color:"#94a3b8"}}>
-  <User size={18}/>
-  <span>{user?.name}</span>
-</div>
-</p>
-
-<p style={{color:"#94a3b8"}}>
-<div style={{display:"flex",alignItems:"center",gap:"10px",color:"#94a3b8"}}>
-  <Mail size={18}/>
-  <span>{user?.email}</span>
-</div>
-</p>
-
-<hr style={{margin:"15px 0",opacity:.2}}/>
-
-<div
-style={{
-display:"flex",
-flexDirection:"column",
-gap:"14px"
-}}
->
-
-<div style={{cursor:"pointer"}}>
-<div style={{display:"flex",alignItems:"center",gap:"10px",cursor:"pointer"}}>
-  <Pencil size={18}/>
-  <span>Edit Profile</span>
-</div>
-</div>
-
-<div style={{cursor:"pointer"}}>
-<div style={{display:"flex",alignItems:"center",gap:"10px",cursor:"pointer"}}>
-  <Lock size={18}/>
-  <span>Change Password</span>
-</div>
-</div>
-
-<div
-onClick={handleLogout}
-style={{
-cursor:"pointer",
-color:"#ef4444"
-}}
->
- <LogOut size={18}/>
-  <span>Logout</span>
-</div>
-
-</div>
-
-</div>
-
-)}
-
-          {/* USER INFO */}
-
-        {(!collapsed || isMobile) && (
-
-            <div>
-
-              <p
-
-                style={{
-
-                  margin: 0,
-
-                  fontSize:
-                    "18px",
-
-                  fontWeight:
-                    "700",
-
-                  color:
-
- dark
-
-    ? "white"
-
-    : "#0f172a"
-
-                }}
-              >
-
-                {
-
-                  user?.name
-
-                  || "User"
-
-                }
-
-              </p>
-
-              <div
-
-                style={{
-
-                  display:"flex",
-
-                  alignItems:"center",
-
-                  gap:"10px",
-
-                  marginTop:"4px"
-
-                }}
-              >
-
-                <p
-
-                  style={{
-
-                    margin:0,
-
-                    fontSize:"13px",
-
-                    color:
-dark
-
-    ? "#94a3b8"
-
-    : "#475569"
-
-                  }}
-                >
-
-                  Developer
-
-                </p>
-
-              </div>
-
-            </div>
-
-          )}
-
+          {user?.name}
         </div>
+
+        <div
+          style={{
+            color: "#94a3b8",
+            fontSize: "14px",
+          }}
+        >
+          Developer
+        </div>
+      </div>
+    )}
+
+  </div>
+
+  {profileOpen && (
+
+    <div
+      style={{
+        position: "absolute",
+        top: "65px",
+        left: "0",
+        width: "240px",
+        background: "#111827",
+        border: "1px solid rgba(255,255,255,.08)",
+        borderRadius: "18px",
+        padding: "18px",
+        boxShadow: "0 20px 40px rgba(0,0,0,.45)",
+        zIndex: 9999,
+      }}
+    >
+
+      <h3
+        style={{
+          color: "white",
+          marginBottom: "15px",
+        }}
+      >
+        My Profile
+      </h3>
+
+      <div
+        style={{
+          display: "flex",
+          gap: "10px",
+          color: "#94a3b8",
+          marginBottom: "8px",
+        }}
+      >
+        <User size={18} />
+        <span>{user?.name}</span>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          gap: "10px",
+          color: "#94a3b8",
+        }}
+      >
+        <Mail size={18} />
+        <span>{user?.email}</span>
+      </div>
+
+      <hr
+        style={{
+          margin: "15px 0",
+          opacity: .2,
+        }}
+      />
+
+      <div
+        style={{
+          display: "flex",
+          gap: "10px",
+          marginBottom: "15px",
+          cursor: "pointer",
+        }}
+      >
+        <Pencil size={18} />
+        <span>Edit Profile</span>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          gap: "10px",
+          marginBottom: "15px",
+          cursor: "pointer",
+        }}
+      >
+        <Lock size={18} />
+        <span>Change Password</span>
+      </div>
+
+      <div
+        onClick={handleLogout}
+        style={{
+          display: "flex",
+          gap: "10px",
+          color: "#ef4444",
+          cursor: "pointer",
+        }}
+      >
+        <LogOut size={18} />
+        <span>Logout</span>
+      </div>
+
+    </div>
+
+  )}
+
+</div>
 
         {/* =========================
         LOGO
